@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.5.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.5.001" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_csv" compatibility="9.5.001" expanded="true" height="68" name="Read CSV" width="90" x="45" y="34">
+        <parameter key="csv_file" value="D:\STUDY\MBA\MBA 753\Term Project\SalesForce_Contact.csv"/>
+        <parameter key="column_separators" value=","/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value="MM/dd/yyyy"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1252"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Id.true.polynominal.attribute"/>
+          <parameter key="1" value="AccountId.true.polynominal.attribute"/>
+          <parameter key="2" value="RecordTypeId.true.polynominal.attribute"/>
+          <parameter key="3" value="MailingState.true.polynominal.attribute"/>
+          <parameter key="4" value="MailingPostalCode.true.integer.attribute"/>
+          <parameter key="5" value="MailingCountry.true.polynominal.attribute"/>
+          <parameter key="6" value="LeadSource.true.polynominal.attribute"/>
+          <parameter key="7" value="OwnerId.true.polynominal.attribute"/>
+          <parameter key="8" value="HasOptedOutOfEmail.true.integer.attribute"/>
+          <parameter key="9" value="HasOptedOutOfFax.true.integer.attribute"/>
+          <parameter key="10" value="DoNotCall.true.integer.attribute"/>
+          <parameter key="11" value="CanAllowPortalSelfReg.true.integer.attribute"/>
+          <parameter key="12" value="CreatedDate.true.date.attribute"/>
+          <parameter key="13" value="CreatedById.true.polynominal.attribute"/>
+          <parameter key="14" value="LastModifiedDate.true.date.attribute"/>
+          <parameter key="15" value="LastModifiedById.true.polynominal.attribute"/>
+          <parameter key="16" value="SystemModstamp.true.date.attribute"/>
+          <parameter key="17" value="LastActivityDate.true.date.attribute"/>
+          <parameter key="18" value="Previous_HH_Client__c.true.integer.attribute"/>
+          <parameter key="19" value="Volunteer_Interests__c.true.polynominal.attribute"/>
+          <parameter key="20" value="Tableau_Fix__c.true.integer.attribute"/>
+          <parameter key="21" value="Multiple_AVR__c.true.integer.attribute"/>
+          <parameter key="22" value="Vendor_Contact__c.true.integer.attribute"/>
+          <parameter key="23" value="Do_Not_Mail_old__c.true.integer.attribute"/>
+          <parameter key="24" value="Gender__c.true.polynominal.attribute"/>
+          <parameter key="25" value="Race__c.true.polynominal.attribute"/>
+          <parameter key="26" value="Number_of_dependents__c.true.polynominal.attribute"/>
+          <parameter key="27" value="Employment_Barriers__c.true.polynominal.attribute"/>
+          <parameter key="28" value="Interview_Skills__c.true.integer.attribute"/>
+          <parameter key="29" value="Veteran_agreed_to_terms_at_Registration__c.true.integer.attribute"/>
+          <parameter key="30" value="Start_Date__c.true.polynominal.attribute"/>
+          <parameter key="31" value="Volunteer_Agreement_on_File__c.true.integer.attribute"/>
+          <parameter key="32" value="Additional_Service_Needs__c.true.polynominal.attribute"/>
+          <parameter key="33" value="Previously_Interviewed__c.true.polynominal.attribute"/>
+          <parameter key="34" value="Referral_Date__c.true.polynominal.attribute"/>
+          <parameter key="35" value="Date_of_Service_Entry__c.true.polynominal.attribute"/>
+          <parameter key="36" value="Last_Rank__c.true.polynominal.attribute"/>
+          <parameter key="37" value="Unsubscribe__c.true.polynominal.attribute"/>
+          <parameter key="38" value="O2O_Status__c.true.polynominal.attribute"/>
+          <parameter key="39" value="O2O_Partners_Previously_Applied_To__c.true.polynominal.attribute"/>
+          <parameter key="40" value="Active__c.true.polynominal.attribute"/>
+          <parameter key="41" value="X3_Month_Survey_Date__c.true.polynominal.attribute"/>
+          <parameter key="42" value="Mileage_Willing_To_Commute__c.true.polynominal.attribute"/>
+          <parameter key="43" value="Alumni_Survey_Completed__c.true.integer.attribute"/>
+          <parameter key="44" value="Send_Retention_Survey__c.true.integer.attribute"/>
+          <parameter key="45" value="Referred_To__c.true.polynominal.attribute"/>
+          <parameter key="46" value="X6_Month_Survey_Date__c.true.polynominal.attribute"/>
+          <parameter key="47" value="Security_Clearance_Description__c.true.polynominal.attribute"/>
+          <parameter key="48" value="Temporarily_Unavailable__c.true.integer.attribute"/>
+          <parameter key="49" value="Highest_Level_of_Education_Completed__c.true.polynominal.attribute"/>
+          <parameter key="50" value="OIF_OEF_Deployed__c.true.polynominal.attribute"/>
+          <parameter key="51" value="Status__c.true.polynominal.attribute"/>
+          <parameter key="52" value="Reasons_For_Additional_Service__c.true.polynominal.attribute"/>
+          <parameter key="53" value="CRF_Impact__c.true.polynominal.attribute"/>
+          <parameter key="54" value="DD214__c.true.polynominal.attribute"/>
+          <parameter key="55" value="Purple_Heart_Recipient__c.true.polynominal.attribute"/>
+          <parameter key="56" value="Active_Color__c.true.polynominal.attribute"/>
+          <parameter key="57" value="Job_Function_Hired_In__c.true.polynominal.attribute"/>
+          <parameter key="58" value="Desired_Job_Function__c.true.polynominal.attribute"/>
+          <parameter key="59" value="Possible_Job_Matches__c.true.polynominal.attribute"/>
+          <parameter key="60" value="Date_Assigned_To_Online__c.true.polynominal.attribute"/>
+          <parameter key="61" value="Military_Occupation__c.true.polynominal.attribute"/>
+          <parameter key="62" value="Submitted_for_Mentor__c.true.polynominal.attribute"/>
+          <parameter key="63" value="VTS_Recommended_Seniority_Level__c.true.polynominal.attribute"/>
+          <parameter key="64" value="Assessment_Completed_By__c.true.polynominal.attribute"/>
+          <parameter key="65" value="Resume_Completed_By__c.true.polynominal.attribute"/>
+          <parameter key="66" value="contact_history__c.true.polynominal.attribute"/>
+          <parameter key="67" value="Independence_Project_Group__c.true.polynominal.attribute"/>
+          <parameter key="68" value="Dat_Initial_Assessment_was_Completed__c.true.polynominal.attribute"/>
+          <parameter key="69" value="Do_Not_Notify_Client__c.true.integer.attribute"/>
+          <parameter key="70" value="Hire_Funding_Source__c.true.polynominal.attribute"/>
+          <parameter key="71" value="Company_Name__c.true.polynominal.attribute"/>
+          <parameter key="72" value="Primary_Military_Occupational_Specialty__c.true.polynominal.attribute"/>
+          <parameter key="73" value="IVMF_Service_Branch__c.true.polynominal.attribute"/>
+          <parameter key="74" value="stayclassy__date_of_last_donation__c.true.polynominal.attribute"/>
+          <parameter key="75" value="Donation_Amount__c.true.polynominal.attribute"/>
+          <parameter key="76" value="Donor_Status__c.true.polynominal.attribute"/>
+          <parameter key="77" value="stayclassy__opt_in__c.true.integer.attribute"/>
+          <parameter key="78" value="MyTrak_Goal_Job_Industry__c.true.polynominal.attribute"/>
+          <parameter key="79" value="stayclassy__sc_total_donated__c.true.polynominal.attribute"/>
+          <parameter key="80" value="Payment_Type_for_Donation__c.true.polynominal.attribute"/>
+          <parameter key="81" value="Months_Unemployed__c.true.polynominal.attribute"/>
+          <parameter key="82" value="What_volunteer_experience_have_they_had__c.true.polynominal.attribute"/>
+          <parameter key="83" value="Payment_Received__c.true.polynominal.attribute"/>
+          <parameter key="84" value="Anonymous_Donor__c.true.integer.attribute"/>
+          <parameter key="85" value="stayclassy__sc_total_donations__c.true.polynominal.attribute"/>
+          <parameter key="86" value="Online_Training_Participant__c.true.integer.attribute"/>
+          <parameter key="87" value="Date_Assigned_To_HHUSA__c.true.date.attribute"/>
+          <parameter key="88" value="Expected_Separation_Date__c.true.polynominal.attribute"/>
+          <parameter key="89" value="Date_Vet_was_recommended_to_portal__c.true.polynominal.attribute"/>
+          <parameter key="90" value="Date_Vet_was_removed_from_portal__c.true.polynominal.attribute"/>
+          <parameter key="91" value="Act_On_Behavior_Score__c.true.polynominal.attribute"/>
+          <parameter key="92" value="Responsive__c.true.integer.attribute"/>
+          <parameter key="93" value="Interested_In_Volunteer_Opportunities__c.true.polynominal.attribute"/>
+          <parameter key="94" value="O2O_Hire__c.true.integer.attribute"/>
+          <parameter key="95" value="Donor__c.true.integer.attribute"/>
+          <parameter key="96" value="How_they_want_to_volunteer_picklist__c.true.polynominal.attribute"/>
+          <parameter key="97" value="Awards_and_Decorations_Earned__c.true.polynominal.attribute"/>
+          <parameter key="98" value="Volunteer__c.true.integer.attribute"/>
+          <parameter key="99" value="Client__c.true.integer.attribute"/>
+          <parameter key="100" value="Disability_Rating__c.true.polynominal.attribute"/>
+          <parameter key="101" value="Business_Contact__c.true.integer.attribute"/>
+          <parameter key="102" value="Client_Type__c.true.polynominal.attribute"/>
+          <parameter key="103" value="priority_veteran__c.true.integer.attribute"/>
+          <parameter key="104" value="O2O_Program_Participant__c.true.integer.attribute"/>
+          <parameter key="105" value="VCTP_Participant__c.true.integer.attribute"/>
+          <parameter key="106" value="Available_For_Urgents__c.true.integer.attribute"/>
+          <parameter key="107" value="Service_Branch__c.true.polynominal.attribute"/>
+          <parameter key="108" value="O2O_Coordinator__c.true.polynominal.attribute"/>
+          <parameter key="109" value="Contact_Type__c.true.polynominal.attribute"/>
+          <parameter key="110" value="Pledged_Amount_per_hole_played__c.true.polynominal.attribute"/>
+          <parameter key="111" value="Special_Event__c.true.polynominal.attribute"/>
+          <parameter key="112" value="Wish_to_become_Corporate_Sponsor__c.true.integer.attribute"/>
+          <parameter key="113" value="Interested_In_Online_Employer_Training__c.true.integer.attribute"/>
+          <parameter key="114" value="X1_Year_Survey_Date__c.true.polynominal.attribute"/>
+          <parameter key="115" value="X2_Year_Survey_Date__c.true.polynominal.attribute"/>
+          <parameter key="116" value="X3_Year_Survey_Date__c.true.polynominal.attribute"/>
+          <parameter key="117" value="Last_Correspondence_Type__c.true.polynominal.attribute"/>
+          <parameter key="118" value="Last_Discussion_Topic__c.true.polynominal.attribute"/>
+          <parameter key="119" value="Do_Not_Use__c.true.integer.attribute"/>
+          <parameter key="120" value="Funder__c.true.polynominal.attribute"/>
+          <parameter key="121" value="Volunteer_Owner__c.true.polynominal.attribute"/>
+          <parameter key="122" value="Service_Members_Status__c.true.polynominal.attribute"/>
+          <parameter key="123" value="Newsletter_Subscriber__c.true.integer.attribute"/>
+          <parameter key="124" value="O2O_Hire_Date__c.true.polynominal.attribute"/>
+          <parameter key="125" value="Exclude_From_Alumni_Survey__c.true.integer.attribute"/>
+          <parameter key="126" value="Upskilled__c.true.integer.attribute"/>
+          <parameter key="127" value="O2O_Upskilled_Date__c.true.polynominal.attribute"/>
+          <parameter key="128" value="Times_Hired__c.true.integer.attribute"/>
+          <parameter key="129" value="Match_Eligible_Date__c.true.polynominal.attribute"/>
+          <parameter key="130" value="Online_Training_Participant_Date__c.true.polynominal.attribute"/>
+          <parameter key="131" value="AVR__c.true.integer.attribute"/>
+          <parameter key="132" value="Multiple_Hire_Review_Complete__c.true.integer.attribute"/>
+          <parameter key="133" value="Concentration__c.true.polynominal.attribute"/>
+          <parameter key="134" value="Date_of_Volunteer_Application__c.true.polynominal.attribute"/>
+          <parameter key="135" value="Federal_Hire__c.true.integer.attribute"/>
+          <parameter key="136" value="Date_IP_Survey_Sent__c.true.polynominal.attribute"/>
+          <parameter key="137" value="O2O_Unresponsive_Date__c.true.polynominal.attribute"/>
+          <parameter key="138" value="Hired_with_EO_assistance__c.true.integer.attribute"/>
+          <parameter key="139" value="Hire_Records__c.true.integer.attribute"/>
+          <parameter key="140" value="Litmos_Provisioned_Date__c.true.polynominal.attribute"/>
+          <parameter key="141" value="Virtual_Services_Specialist__c.true.polynominal.attribute"/>
+          <parameter key="142" value="HHELP_Status__c.true.polynominal.attribute"/>
+          <parameter key="143" value="Additional_Registration_Interest__c.true.integer.attribute"/>
+          <parameter key="144" value="Volunteer_Inactive_Reason__c.true.polynominal.attribute"/>
+          <parameter key="145" value="External_Profile_Id__c.true.integer.attribute"/>
+          <parameter key="146" value="VTS_Ready_Date__c.true.polynominal.attribute"/>
+          <parameter key="147" value="Federal_Program_Participant__c.true.integer.attribute"/>
+          <parameter key="148" value="Exclude_From_Retention_Survey__c.true.integer.attribute"/>
+          <parameter key="149" value="IP_Consent__c.true.integer.attribute"/>
+          <parameter key="150" value="Employer_Account_Specialist_Notes__c.true.polynominal.attribute"/>
+          <parameter key="151" value="On_Job_Board__c.true.integer.attribute"/>
+          <parameter key="152" value="Program_Enrollments__c.true.integer.attribute"/>
+          <parameter key="153" value="Client_Transfer_Date__c.true.polynominal.attribute"/>
+          <parameter key="154" value="IVMF_Employment_Outcome_Type__c.true.polynominal.attribute"/>
+          <parameter key="155" value="EventbriteSync__EventbriteId__c.true.polynominal.attribute"/>
+          <parameter key="156" value="EventbriteSync__EventbriteType__c.true.polynominal.attribute"/>
+          <parameter key="157" value="Alumni__c.true.integer.attribute"/>
+          <parameter key="158" value="Ambassadorship_Level__c.true.polynominal.attribute"/>
+          <parameter key="159" value="Event_Information__c.true.polynominal.attribute"/>
+          <parameter key="160" value="Applied_to_hired_position_on_Job_Board__c.true.integer.attribute"/>
+          <parameter key="161" value="Updated_Resume_Complete__c.true.integer.attribute"/>
+          <parameter key="162" value="Date_Updated_Resume_Complete__c.true.polynominal.attribute"/>
+          <parameter key="163" value="Updated_Resume_Completed_By__c.true.polynominal.attribute"/>
+          <parameter key="164" value="Earliest_Availability__c.true.polynominal.attribute"/>
+          <parameter key="165" value="Federal_Program_Participant_Date__c.true.polynominal.attribute"/>
+          <parameter key="166" value="About_Me_Completion_Date__c.true.polynominal.attribute"/>
+          <parameter key="167" value="Get_Start_Date__c.true.integer.attribute"/>
+          <parameter key="168" value="HHUSA_Workshop_Participant__c.true.integer.attribute"/>
+          <parameter key="169" value="O2O_Initial_Assessment_Complete__c.true.integer.attribute"/>
+          <parameter key="170" value="Date_Attended_HHUSA_Workshop__c.true.polynominal.attribute"/>
+          <parameter key="171" value="Location_of_Vet_When_Trained__c.true.polynominal.attribute"/>
+          <parameter key="172" value="O2O_Initial_Assessment_Date__c.true.polynominal.attribute"/>
+          <parameter key="173" value="IVMF_Position_Hired_For__c.true.polynominal.attribute"/>
+          <parameter key="174" value="Hiring_Account__c.true.polynominal.attribute"/>
+          <parameter key="175" value="Litmos__Access_Level__c.true.polynominal.attribute"/>
+          <parameter key="176" value="Litmos__Completed_Percentage__c.true.integer.attribute"/>
+          <parameter key="177" value="Willing_to_relo_with_no_assistance__c.true.integer.attribute"/>
+          <parameter key="178" value="Litmos__Courses_Assigned__c.true.integer.attribute"/>
+          <parameter key="179" value="Litmos__Courses_Completed__c.true.integer.attribute"/>
+          <parameter key="180" value="Litmos__Deactivate_From_Litmos__c.true.integer.attribute"/>
+          <parameter key="181" value="Litmos__Languages__c.true.polynominal.attribute"/>
+          <parameter key="182" value="Litmos__Level__c.true.polynominal.attribute"/>
+          <parameter key="183" value="Service_Rank__c.true.polynominal.attribute"/>
+          <parameter key="184" value="Date_of_Separation__c.true.polynominal.attribute"/>
+          <parameter key="185" value="My_Goals_Completion_Date__c.true.polynominal.attribute"/>
+          <parameter key="186" value="Litmos__LitmosID__c.true.polynominal.attribute"/>
+          <parameter key="187" value="Litmos__Litmos_Activated__c.true.integer.attribute"/>
+          <parameter key="188" value="Staff_member_assigned_to_be_mentor__c.true.polynominal.attribute"/>
+          <parameter key="189" value="Created_LinkedIn_account__c.true.integer.attribute"/>
+          <parameter key="190" value="Date_assigned_to_staff__c.true.date.attribute"/>
+          <parameter key="191" value="Litmos__Litmos_UserId__c.true.real.attribute"/>
+          <parameter key="192" value="Litmos__OriginalId__c.true.polynominal.attribute"/>
+          <parameter key="193" value="Litmos__Sync_Litmos__c.true.integer.attribute"/>
+          <parameter key="194" value="Date_Turned_Purple__c.true.polynominal.attribute"/>
+          <parameter key="195" value="Languages_Spoken__c.true.polynominal.attribute"/>
+          <parameter key="196" value="Litmos__User_Id__c.true.polynominal.attribute"/>
+          <parameter key="197" value="CODE_Release_on_File__c.true.integer.attribute"/>
+          <parameter key="198" value="Email_Verified_Date__c.true.polynominal.attribute"/>
+          <parameter key="199" value="MyTrak_1_on_1_Career_Coaching_Request__c.true.integer.attribute"/>
+          <parameter key="200" value="MyTrak_1_on_1_Request_Date__c.true.polynominal.attribute"/>
+          <parameter key="201" value="MyTrak_Be_a_Desirable_Candidate_Complete__c.true.integer.attribute"/>
+          <parameter key="202" value="MyTrak_Employed_outside_military__c.true.integer.attribute"/>
+          <parameter key="203" value="MyTrak_Essentials_Complete__c.true.integer.attribute"/>
+          <parameter key="204" value="MyTrak_Fed_Resume_Review_Request_Date__c.true.polynominal.attribute"/>
+          <parameter key="205" value="MyTrak_Federal_Resume_Review__c.true.integer.attribute"/>
+          <parameter key="206" value="MyTrak_Is_MyTrak_Registrant__c.true.integer.attribute"/>
+          <parameter key="207" value="MyTrak_Mock_Interview_Request__c.true.integer.attribute"/>
+          <parameter key="208" value="MyTrak_Mock_Inteview_Request_Date__c.true.polynominal.attribute"/>
+          <parameter key="209" value="MyTrak_Prepare_for_interview_Complete__c.true.integer.attribute"/>
+          <parameter key="210" value="MyTrak_Request_a_Service_Complete__c.true.integer.attribute"/>
+          <parameter key="211" value="MyTrak_Rethink_Social_Presence_Complete__c.true.integer.attribute"/>
+          <parameter key="212" value="MyTrak_Save_and_Exit__c.true.polynominal.attribute"/>
+          <parameter key="213" value="MyTrak_Self_Portrait_Complete__c.true.integer.attribute"/>
+          <parameter key="214" value="MyTrak_Share_your_Experience_Complete__c.true.integer.attribute"/>
+          <parameter key="215" value="MyTrak_Spouse_is_Employed__c.true.integer.attribute"/>
+          <parameter key="216" value="MyTrak_VTS_Assigned__c.true.integer.attribute"/>
+          <parameter key="217" value="Self_Registration_Delete__c.true.integer.attribute"/>
+          <parameter key="218" value="Self_Registration_RefId__c.true.polynominal.attribute"/>
+          <parameter key="219" value="Self_Registration_SessionId__c.true.polynominal.attribute"/>
+          <parameter key="220" value="Self_Registration_Source__c.true.polynominal.attribute"/>
+          <parameter key="221" value="Self_Registration_Step__c.true.polynominal.attribute"/>
+          <parameter key="222" value="MyTrak_Essentials_Completed_Date__c.true.polynominal.attribute"/>
+          <parameter key="223" value="MyTrak_About_Me__c.true.integer.attribute"/>
+          <parameter key="224" value="MyTrak_Military_Experience__c.true.integer.attribute"/>
+          <parameter key="225" value="MyTrak_My_Goals__c.true.integer.attribute"/>
+          <parameter key="226" value="MyTrak_Past_Jobs__c.true.integer.attribute"/>
+          <parameter key="227" value="MyTrak_Manually_Enabled_Date__c.true.polynominal.attribute"/>
+          <parameter key="228" value="MyTrak_Manually_Enabled__c.true.integer.attribute"/>
+          <parameter key="229" value="MyTrak_Send_Manual_Email__c.true.integer.attribute"/>
+          <parameter key="230" value="MyTrak_Total_Questions_Answered__c.true.integer.attribute"/>
+          <parameter key="231" value="Manager_Concurs__c.true.polynominal.attribute"/>
+          <parameter key="232" value="Job_Board_Access__c.true.integer.attribute"/>
+          <parameter key="233" value="O2O_Multiple_Hire_Date__c.true.polynominal.attribute"/>
+          <parameter key="234" value="Targeted_Services__c.true.polynominal.attribute"/>
+          <parameter key="235" value="Donor_Type__c.true.polynominal.attribute"/>
+          <parameter key="236" value="Photo_on_File__c.true.integer.attribute"/>
+          <parameter key="237" value="Tax_Communication_Preference__c.true.polynominal.attribute"/>
+          <parameter key="238" value="Donor_Tracking_Color__c.true.polynominal.attribute"/>
+          <parameter key="239" value="Date_Resume_Completed__c.true.polynominal.attribute"/>
+          <parameter key="240" value="Add_l_Military_Service_Notes__c.true.polynominal.attribute"/>
+          <parameter key="241" value="Earliest_Employment_Start_Date__c.true.polynominal.attribute"/>
+          <parameter key="242" value="Desired_City_of_Employment__c.true.polynominal.attribute"/>
+          <parameter key="243" value="Desired_State_of_Employment__c.true.polynominal.attribute"/>
+          <parameter key="244" value="Salary_Expectations__c.true.polynominal.attribute"/>
+          <parameter key="245" value="Specific_Industries_Jobs__c.true.polynominal.attribute"/>
+          <parameter key="246" value="Is_the_Initial_Intake_Assessment_done__c.true.integer.attribute"/>
+          <parameter key="247" value="Other_Workshop_Notes__c.true.polynominal.attribute"/>
+          <parameter key="248" value="Confirmed_Hired_Date__c.true.polynominal.attribute"/>
+          <parameter key="249" value="Position_Hired_For__c.true.polynominal.attribute"/>
+          <parameter key="250" value="Client_Currently_Overseas__c.true.integer.attribute"/>
+          <parameter key="251" value="Revised_Resume_Used_to_Apply_for_Job__c.true.polynominal.attribute"/>
+          <parameter key="252" value="ringdna100__Call_Attempts__c.true.integer.attribute"/>
+          <parameter key="253" value="Job_Type__c.true.polynominal.attribute"/>
+          <parameter key="254" value="Original_Resume_on_File__c.true.polynominal.attribute"/>
+          <parameter key="255" value="Education_Summary__c.true.polynominal.attribute"/>
+          <parameter key="256" value="Hired_Section_Notes__c.true.polynominal.attribute"/>
+          <parameter key="257" value="Hired_but_still_active_and_looking__c.true.polynominal.attribute"/>
+          <parameter key="258" value="ringdna100__Email_Attempts__c.true.integer.attribute"/>
+          <parameter key="259" value="Career_Opportunity_Day_Participant__c.true.integer.attribute"/>
+          <parameter key="260" value="Location_of_Career_Opportunity_Day__c.true.polynominal.attribute"/>
+          <parameter key="261" value="Date_of_Career_Opportunity_Day__c.true.polynominal.attribute"/>
+          <parameter key="262" value="ringdna100__First_Inbound_Call__c.true.polynominal.attribute"/>
+          <parameter key="263" value="ringdna100__First_Outbound_Call__c.true.date.attribute"/>
+          <parameter key="264" value="Date_turned_grey__c.true.polynominal.attribute"/>
+          <parameter key="265" value="Date_turned_green__c.true.polynominal.attribute"/>
+          <parameter key="266" value="Date_of_first_contact__c.true.polynominal.attribute"/>
+          <parameter key="267" value="Summary_of_Qualifications__c.true.polynominal.attribute"/>
+          <parameter key="268" value="Areas_of_Experience__c.true.polynominal.attribute"/>
+          <parameter key="269" value="Preferred_Method_of_Contact__c.true.polynominal.attribute"/>
+          <parameter key="270" value="Military_Training_Courses_Attended__c.true.polynominal.attribute"/>
+          <parameter key="271" value="How_the_veteran_heard_about_us__c.true.polynominal.attribute"/>
+          <parameter key="272" value="Permission_to_use_job_board_granted__c.true.integer.attribute"/>
+          <parameter key="273" value="Additional_Referred_By__c.true.polynominal.attribute"/>
+          <parameter key="274" value="ringdna100__Last_Email_Attempt__c.true.date.attribute"/>
+          <parameter key="275" value="ringdna100__Last_Inbound_Call__c.true.polynominal.attribute"/>
+          <parameter key="276" value="Success_Story_on_file__c.true.integer.attribute"/>
+          <parameter key="277" value="Is_vet_willing_to_go_on_camera__c.true.integer.attribute"/>
+          <parameter key="278" value="ringdna100__Last_Outbound_Call__c.true.date.attribute"/>
+          <parameter key="279" value="ringdna100__Response_Type__c.true.polynominal.attribute"/>
+          <parameter key="280" value="Current_Volunteer__c.true.polynominal.attribute"/>
+          <parameter key="281" value="ringdna100__Time_to_First_Dial_Minutes__c.true.real.attribute"/>
+          <parameter key="282" value="ringdna100__Time_to_First_Response__c.true.real.attribute"/>
+          <parameter key="283" value="VCF_Participant__c.true.integer.attribute"/>
+          <parameter key="284" value="Recurring_Donor__c.true.polynominal.attribute"/>
+          <parameter key="285" value="Recurring_Donor_Frequency__c.true.polynominal.attribute"/>
+          <parameter key="286" value="Virtual_Workshop_Participant__c.true.integer.attribute"/>
+          <parameter key="287" value="Webinar_Participant__c.true.integer.attribute"/>
+          <parameter key="288" value="Grey_Black_Justification__c.true.polynominal.attribute"/>
+          <parameter key="289" value="GW_Volunteers__Volunteer_Auto_Reminder_Email_Opt_Out__c.true.integer.attribute"/>
+          <parameter key="290" value="No_match_found__c.true.integer.attribute"/>
+          <parameter key="291" value="Jobs_applied_to_on_HHUSA_job_board__c.true.polynominal.attribute"/>
+          <parameter key="292" value="Resume_Tailoring_Tips__c.true.integer.attribute"/>
+          <parameter key="293" value="OTYC_Start_Date__c.true.polynominal.attribute"/>
+          <parameter key="294" value="VCTP_Start_Date__c.true.polynominal.attribute"/>
+          <parameter key="295" value="Additional_Referred_By_Date__c.true.polynominal.attribute"/>
+          <parameter key="296" value="Willing_to_complete_success_story__c.true.integer.attribute"/>
+          <parameter key="297" value="Coded_Black_Reviewer_Comments__c.true.polynominal.attribute"/>
+          <parameter key="298" value="HHUSA_Corporate_Partner__c.true.integer.attribute"/>
+          <parameter key="299" value="Date_Of_Birth__c.true.polynominal.attribute"/>
+          <parameter key="300" value="Automated_Success_Story_Completed__c.true.integer.attribute"/>
+          <parameter key="301" value="If_Security_Clearance_Yes_What_kind__c.true.polynominal.attribute"/>
+          <parameter key="302" value="Disability_percentage_60_or_above__c.true.integer.attribute"/>
+          <parameter key="303" value="Job_Seeker_Last_Activity_Date__c.true.polynominal.attribute"/>
+          <parameter key="304" value="Volunteer_Keywords__c.true.polynominal.attribute"/>
+          <parameter key="305" value="Industry_hired_in__c.true.polynominal.attribute"/>
+          <parameter key="306" value="Litmos_Deactivated__c.true.integer.attribute"/>
+          <parameter key="307" value="Salary_Range__c.true.polynominal.attribute"/>
+          <parameter key="308" value="Internship__c.true.integer.attribute"/>
+          <parameter key="309" value="Paid_Internship__c.true.polynominal.attribute"/>
+          <parameter key="310" value="Hired_Location__c.true.polynominal.attribute"/>
+          <parameter key="311" value="Date_Turned_Blue__c.true.polynominal.attribute"/>
+          <parameter key="312" value="Foreign_Service__c.true.integer.attribute"/>
+          <parameter key="313" value="If_served_overseas_locations_of_service__c.true.polynominal.attribute"/>
+          <parameter key="314" value="Foreign_Service_Summary__c.true.polynominal.attribute"/>
+          <parameter key="315" value="Workshop_Staff_Members__c.true.polynominal.attribute"/>
+          <parameter key="316" value="Reason_Vet_Turned_Grey__c.true.polynominal.attribute"/>
+          <parameter key="317" value="Volunteer_Services__c.true.polynominal.attribute"/>
+          <parameter key="318" value="Other_Volunteer_Services__c.true.polynominal.attribute"/>
+          <parameter key="319" value="Workshop_Type__c.true.polynominal.attribute"/>
+          <parameter key="320" value="Military_Spouse_Caregiver__c.true.integer.attribute"/>
+          <parameter key="321" value="Volunteer_is_a_Veteran__c.true.integer.attribute"/>
+          <parameter key="322" value="Military_Branch__c.true.polynominal.attribute"/>
+          <parameter key="323" value="Multiple_HHUSA_Hire__c.true.integer.attribute"/>
+          <parameter key="324" value="Historical_hire_summary__c.true.polynominal.attribute"/>
+          <parameter key="325" value="Employment_Type__c.true.polynominal.attribute"/>
+          <parameter key="326" value="Desired_Geographic_Region_of_Employment__c.true.polynominal.attribute"/>
+          <parameter key="327" value="Desired_State_s_of_Employment__c.true.polynominal.attribute"/>
+          <parameter key="328" value="Proof_of_Service_Type__c.true.polynominal.attribute"/>
+          <parameter key="329" value="Published_on_details__c.true.polynominal.attribute"/>
+          <parameter key="330" value="Date_of_Service_EntryNew__c.true.date.attribute"/>
+          <parameter key="331" value="Date_of_SeparationNew__c.true.date.attribute"/>
+          <parameter key="332" value="Referred_by__c.true.polynominal.attribute"/>
+          <parameter key="333" value="Reserves_National_Guard__c.true.integer.attribute"/>
+          <parameter key="334" value="Submitted_for_Hire__c.true.integer.attribute"/>
+          <parameter key="335" value="Office_Manager_Approved__c.true.integer.attribute"/>
+          <parameter key="336" value="Regional_Manager_Approved__c.true.integer.attribute"/>
+          <parameter key="337" value="Hire_Heroes_USA_Confirmed_Hire__c.true.integer.attribute"/>
+          <parameter key="338" value="Date_Submitted_for_Hire__c.true.polynominal.attribute"/>
+          <parameter key="339" value="Approval_Notes__c.true.polynominal.attribute"/>
+          <parameter key="340" value="Workshop_Sponsor__c.true.polynominal.attribute"/>
+          <parameter key="341" value="VP_Dash_Date__c.true.polynominal.attribute"/>
+          <parameter key="342" value="Hired_ZIP_Code__c.true.polynominal.attribute"/>
+          <parameter key="343" value="Do_Not_Text__c.true.integer.attribute"/>
+          <parameter key="344" value="Volunteer_Jobs_Availability__c.true.polynominal.attribute"/>
+          <parameter key="345" value="Date_of_Volunteer_Orientation__c.true.polynominal.attribute"/>
+          <parameter key="346" value="Enrolled_in_School__c.true.integer.attribute"/>
+          <parameter key="347" value="Expected_Graduation_Date__c.true.polynominal.attribute"/>
+          <parameter key="348" value="Funding_Source__c.true.polynominal.attribute"/>
+          <parameter key="349" value="Agrees_to_be_Recognized_on_Website__c.true.integer.attribute"/>
+          <parameter key="350" value="Preferred_Contact_Time_Start__c.true.polynominal.attribute"/>
+          <parameter key="351" value="Preferred_Contact_Time_End__c.true.polynominal.attribute"/>
+          <parameter key="352" value="Desired_Industry_for_Employment__c.true.polynominal.attribute"/>
+          <parameter key="353" value="Finalized_HHUSA_revised_resume_on_file__c.true.integer.attribute"/>
+          <parameter key="354" value="Value_Proposition__c.true.integer.attribute"/>
+          <parameter key="355" value="Documents_Received__c.true.integer.attribute"/>
+          <parameter key="356" value="Date_Documents_Received__c.true.polynominal.attribute"/>
+          <parameter key="357" value="Previous_Confirmed_Hire_Date__c.true.polynominal.attribute"/>
+          <parameter key="358" value="Selected_by_M_D_for_Success_Story__c.true.integer.attribute"/>
+          <parameter key="359" value="Date_published__c.true.polynominal.attribute"/>
+          <parameter key="360" value="Type_of_Success_Story__c.true.polynominal.attribute"/>
+          <parameter key="361" value="Selected_by__c.true.polynominal.attribute"/>
+          <parameter key="362" value="Success_Story_published_on__c.true.polynominal.attribute"/>
+          <parameter key="363" value="Success_Story_Notes__c.true.polynominal.attribute"/>
+          <parameter key="364" value="Bilingual__c.true.integer.attribute"/>
+          <parameter key="365" value="Willing_to_Relocate__c.true.integer.attribute"/>
+          <parameter key="366" value="Min_Salary_Expectations__c.true.polynominal.attribute"/>
+          <parameter key="367" value="Used_Volunteer_Services__c.true.integer.attribute"/>
+          <parameter key="368" value="Desired_Earnings_Type__c.true.polynominal.attribute"/>
+          <parameter key="369" value="Used_Federal_Services__c.true.integer.attribute"/>
+          <parameter key="370" value="Program_Location__c.true.polynominal.attribute"/>
+          <parameter key="371" value="O2O_Cohort_Id__c.true.polynominal.attribute"/>
+          <parameter key="372" value="Orientation_Date__c.true.polynominal.attribute"/>
+          <parameter key="373" value="O2O_Career_Track__c.true.polynominal.attribute"/>
+          <parameter key="374" value="O2O_Training_Track__c.true.polynominal.attribute"/>
+          <parameter key="375" value="Online_Training_Track__c.true.polynominal.attribute"/>
+          <parameter key="376" value="Hired_By_Partnered_Employer__c.true.integer.attribute"/>
+          <parameter key="377" value="Scheduled_Interview_Date__c.true.polynominal.attribute"/>
+          <parameter key="378" value="Matched_Partner_Employer__c.true.polynominal.attribute"/>
+          <parameter key="379" value="For_Workflow_Update__c.true.integer.attribute"/>
+          <parameter key="380" value="Orientation_Completed_By__c.true.polynominal.attribute"/>
+          <parameter key="381" value="Send_Green_Survey__c.true.integer.attribute"/>
+          <parameter key="382" value="Professional_Certification__c.true.polynominal.attribute"/>
+          <parameter key="383" value="TS_Referral_Requested_By__c.true.polynominal.attribute"/>
+          <parameter key="384" value="RealZip__RealZip__c.true.polynominal.attribute"/>
+          <parameter key="385" value="Discharge_Type__c.true.polynominal.attribute"/>
+          <parameter key="386" value="Discharge_Disposition__c.true.polynominal.attribute"/>
+          <parameter key="387" value="Date_Turned_Black__c.true.polynominal.attribute"/>
+          <parameter key="388" value="Litmos__Litmos_Login_Access__c.true.polynominal.attribute"/>
+          <parameter key="389" value="Litmos__Total_Sum_Percentages__c.true.polynominal.attribute"/>
+          <parameter key="390" value="Willing_to_Relocate_to_High_Risk_Area__c.true.integer.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="true"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="filter_examples" compatibility="9.5.001" expanded="true" height="103" name="Filter Examples" width="90" x="179" y="34">
+        <parameter key="parameter_expression" value=""/>
+        <parameter key="condition_class" value="custom_filters"/>
+        <parameter key="invert_filter" value="false"/>
+        <list key="filters_list">
+          <parameter key="filters_entry_key" value="Client__c.eq.1"/>
+        </list>
+        <parameter key="filters_logic_and" value="true"/>
+        <parameter key="filters_check_metadata" value="true"/>
+      </operator>
+      <operator activated="true" class="select_attributes" compatibility="9.5.001" expanded="true" height="82" name="Select Attributes" width="90" x="313" y="34">
+        <parameter key="attribute_filter_type" value="subset"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value="Id|CreatedDate"/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="read_csv" compatibility="9.5.001" expanded="true" height="68" name="Read CSV (2)" width="90" x="45" y="238">
+        <parameter key="csv_file" value="D:\STUDY\MBA\MBA 753\Term Project\SalesForce_Hire_Information__c.csv"/>
+        <parameter key="column_separators" value=","/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value="MM/dd/yyyy"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1252"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Id.true.polynominal.attribute"/>
+          <parameter key="1" value="IsDeleted.true.integer.attribute"/>
+          <parameter key="2" value="Name.true.integer.attribute"/>
+          <parameter key="3" value="CreatedDate.true.date.attribute"/>
+          <parameter key="4" value="CreatedById.true.polynominal.attribute"/>
+          <parameter key="5" value="LastModifiedDate.true.date.attribute"/>
+          <parameter key="6" value="LastModifiedById.true.polynominal.attribute"/>
+          <parameter key="7" value="SystemModstamp.true.date.attribute"/>
+          <parameter key="8" value="LastActivityDate.true.polynominal.attribute"/>
+          <parameter key="9" value="Confirmed_Hired_Date__c.true.date.attribute"/>
+          <parameter key="10" value="Start_Date__c.true.date.attribute"/>
+          <parameter key="11" value="Hiring_Account__c.true.polynominal.attribute"/>
+          <parameter key="12" value="Client_Name__c.true.polynominal.attribute"/>
+          <parameter key="13" value="Hiring_Company_Name__c.true.polynominal.attribute"/>
+          <parameter key="14" value="Position_Hired_For__c.true.polynominal.attribute"/>
+          <parameter key="15" value="Job_Function_Hired_In__c.true.polynominal.attribute"/>
+          <parameter key="16" value="Industry_Hired_In__c.true.polynominal.attribute"/>
+          <parameter key="17" value="Hired_Location__c.true.polynominal.attribute"/>
+          <parameter key="18" value="Hired_Zip_Code__c.true.polynominal.attribute"/>
+          <parameter key="19" value="Salary_Range__c.true.polynominal.attribute"/>
+          <parameter key="20" value="Employment_Type__c.true.polynominal.attribute"/>
+          <parameter key="21" value="Federal_Hire__c.true.integer.attribute"/>
+          <parameter key="22" value="Internship__c.true.integer.attribute"/>
+          <parameter key="23" value="Hired_With_EO_Assistance__c.true.integer.attribute"/>
+          <parameter key="24" value="X7_Day_Review__c.true.integer.attribute"/>
+          <parameter key="25" value="Months_Unemployed__c.true.integer.attribute"/>
+          <parameter key="26" value="Revised_Resume_Used_to_Apply_for_Job__c.true.integer.attribute"/>
+          <parameter key="27" value="Hired_but_still_active_and_looking__c.true.integer.attribute"/>
+          <parameter key="28" value="Date_Submitted_For_Hire__c.true.date.attribute"/>
+          <parameter key="29" value="Hire_Confirmed_By__c.true.polynominal.attribute"/>
+          <parameter key="30" value="Area_Manager_Approved__c.true.integer.attribute"/>
+          <parameter key="31" value="PIM_Approved__c.true.integer.attribute"/>
+          <parameter key="32" value="Ops_Review_Date__c.true.date.attribute"/>
+          <parameter key="33" value="Multiple_Hire__c.true.integer.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="select_attributes" compatibility="9.5.001" expanded="true" height="82" name="Select Attributes (2)" width="90" x="179" y="238">
+        <parameter key="attribute_filter_type" value="subset"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value="Client_Name__c|Ops_Review_Date__c"/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="concurrency:join" compatibility="9.5.001" expanded="true" height="82" name="Join" width="90" x="313" y="187">
+        <parameter key="remove_double_attributes" value="true"/>
+        <parameter key="join_type" value="left"/>
+        <parameter key="use_id_attribute_as_key" value="false"/>
+        <list key="key_attributes">
+          <parameter key="Id" value="Client_Name__c"/>
+        </list>
+        <parameter key="keep_both_join_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="generate_attributes" compatibility="9.5.001" expanded="true" height="82" name="Generate Attributes" width="90" x="447" y="187">
+        <list key="function_descriptions">
+          <parameter key="Duration" value="floor((date_diff(CreatedDate,Ops_Review_Date__c))*1.15741*pow(10,-8))"/>
+        </list>
+        <parameter key="keep_all" value="true"/>
+      </operator>
+      <operator activated="true" class="generate_attributes" compatibility="9.5.001" expanded="true" height="82" name="Generate Attributes (2)" width="90" x="380" y="340">
+        <list key="function_descriptions">
+          <parameter key="Hired" value="if(missing(Duration),0,1)"/>
+        </list>
+        <parameter key="keep_all" value="true"/>
+      </operator>
+      <operator activated="false" class="retrieve" compatibility="9.5.001" expanded="true" height="68" name="Retrieve SalesForce_Contact" width="90" x="45" y="340">
+        <parameter key="repository_entry" value="//Local Repository/Project/SalesForce_Contact"/>
+      </operator>
+      <operator activated="true" class="sort" compatibility="9.5.001" expanded="true" height="82" name="Sort" width="90" x="514" y="340">
+        <parameter key="attribute_name" value="Duration"/>
+        <parameter key="sorting_direction" value="decreasing"/>
+      </operator>
+      <operator activated="true" class="filter_examples" compatibility="9.5.001" expanded="true" height="103" name="Filter Examples (2)" width="90" x="581" y="442">
+        <parameter key="parameter_expression" value=""/>
+        <parameter key="condition_class" value="custom_filters"/>
+        <parameter key="invert_filter" value="true"/>
+        <list key="filters_list">
+          <parameter key="filters_entry_key" value="Duration.eq.?"/>
+        </list>
+        <parameter key="filters_logic_and" value="true"/>
+        <parameter key="filters_check_metadata" value="true"/>
+      </operator>
+      <connect from_op="Read CSV" from_port="output" to_op="Filter Examples" to_port="example set input"/>
+      <connect from_op="Filter Examples" from_port="example set output" to_op="Select Attributes" to_port="example set input"/>
+      <connect from_op="Select Attributes" from_port="example set output" to_op="Join" to_port="left"/>
+      <connect from_op="Read CSV (2)" from_port="output" to_op="Select Attributes (2)" to_port="example set input"/>
+      <connect from_op="Select Attributes (2)" from_port="example set output" to_op="Join" to_port="right"/>
+      <connect from_op="Join" from_port="join" to_op="Generate Attributes" to_port="example set input"/>
+      <connect from_op="Generate Attributes" from_port="example set output" to_op="Generate Attributes (2)" to_port="example set input"/>
+      <connect from_op="Generate Attributes (2)" from_port="example set output" to_op="Sort" to_port="example set input"/>
+      <connect from_op="Sort" from_port="example set output" to_op="Filter Examples (2)" to_port="example set input"/>
+      <connect from_op="Filter Examples (2)" from_port="example set output" to_port="result 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+    </process>
+  </operator>
+</process>
